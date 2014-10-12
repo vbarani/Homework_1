@@ -85,8 +85,25 @@ for (i=0; i<dimension; i++) {
 printf("\n");
 }
 
+// testing the magic square
+
+if(!(test_row(matrix,dimension))){
+ printf("ERROR : row sums are not the same \n");
+ return 1;
+}
+
+if(! (test_column(matrix,dimension))){
+ printf("ERROR : column sums are not the same \n");
+ return 1;
+}
+
+if(!(test_diagonal(matrix,dimension))){
+ printf("ERROR : diagonal sums are not the same \n");
+ return 1;
+}
 
 
-return 1;
+
+return 0;
 }
 
